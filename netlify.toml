@@ -1,0 +1,14 @@
+# This is the configuration file for Netlify.
+
+[build]
+  # This is the command Netlify will run to build your site.
+  command = "npm run build"
+  # This is the directory that contains the built site.
+  publish = "dist"
+
+# This is the magic rule that fixes the "Page Not Found" error for single-page apps.
+# It tells Netlify to redirect all requests to index.html.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
